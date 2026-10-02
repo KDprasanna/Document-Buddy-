@@ -202,7 +202,163 @@ footer {
     .hero h1 {
         font-size: 35px;
     }
+/* Details Page */
 
+.details-page {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+.details-header {
+    text-align: center;
+    background: white;
+    padding: 45px 25px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.details-icon {
+    font-size: 60px;
+    margin-bottom: 15px;
+}
+
+.details-header h1 {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.details-header p {
+    color: #666;
+    font-size: 18px;
+}
+
+
+/* Information Sections */
+
+.info-section {
+    background: white;
+    padding: 30px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.06);
+}
+
+.info-section h2 {
+    margin-bottom: 20px;
+    color: #1f2937;
+}
+
+.info-section p {
+    line-height: 1.7;
+    color: #555;
+}
+
+
+/* Document List */
+
+.document-list,
+.info-section ul {
+    padding-left: 25px;
+}
+
+.document-list li,
+.info-section ul li {
+    margin-bottom: 12px;
+    line-height: 1.5;
+}
+
+
+/* Steps */
+
+.steps {
+    padding-left: 25px;
+}
+
+.steps li {
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+
+/* Warning */
+
+.warning {
+    border-left: 5px solid #f59e0b;
+}
+
+
+/* Checklist */
+
+.checklist {
+    text-align: center;
+}
+
+.checklist button {
+    margin-top: 20px;
+    padding: 12px 22px;
+
+    border: none;
+    border-radius: 7px;
+
+    background: #2563eb;
+    color: white;
+
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.checklist button:hover {
+    background: #1d4ed8;
+}
+
+
+/* Back Button */
+
+.back-button {
+    text-align: center;
+    margin: 35px 0;
+}
+
+.back-button a {
+    display: inline-block;
+
+    padding: 12px 22px;
+
+    background: #111827;
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 7px;
+}
+
+.back-button a:hover {
+    background: #374151;
+}
+
+
+/* Mobile Details Page */
+
+@media (max-width: 768px) {
+
+    .details-page {
+        margin: 25px auto;
+        padding: 15px;
+    }
+
+    .details-header h1 {
+        font-size: 32px;
+    }
+
+    .info-section {
+        padding: 22px;
+    }
+
+}
     .card-container {
         grid-template-columns: 1fr;
     }
