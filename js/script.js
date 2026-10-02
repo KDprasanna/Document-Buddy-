@@ -25,3 +25,31 @@ function openService(service) {
     }
 
 }
+// Interactive document checklist
+
+const documentChecks = document.querySelectorAll(".document-check");
+const checklistProgress = document.getElementById("checklist-progress");
+
+function updateChecklistProgress() {
+
+    if (!checklistProgress) {
+        return;
+    }
+
+    const total = documentChecks.length;
+
+    const completed = document.querySelectorAll(
+        ".document-check:checked"
+    ).length;
+
+    checklistProgress.textContent =
+        Progress: ${completed} / ${total} documents completed;
+}
+
+documentChecks.forEach(function (checkbox) {
+
+    checkbox.addEventListener("change", updateChecklistProgress);
+
+});
+
+updateChecklistProgress();
