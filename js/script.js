@@ -58,3 +58,29 @@ document.addEventListener("DOMContentLoaded", function () {
     updateChecklistProgress();
 
 });
+// Service Search
+
+const serviceSearch = document.getElementById("serviceSearch");
+const searchableCards = document.querySelectorAll(".searchable-card");
+
+if (serviceSearch) {
+
+    serviceSearch.addEventListener("input", function () {
+
+        const searchText = serviceSearch.value.toLowerCase();
+
+        searchableCards.forEach(function (card) {
+
+            const cardText = card.textContent.toLowerCase();
+
+            if (cardText.includes(searchText)) {
+                card.style.display = "";
+            } else {
+                card.style.display = "none";
+            }
+
+        });
+
+    });
+
+}
