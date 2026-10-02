@@ -421,3 +421,36 @@ footer {
 .search-box input:focus {
     outline: none;
 }
+/* Mobile Responsive Design */
+
+@media (max-width: 768px) {
+
+    .cards,
+    .services,
+    .category-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .search-box input {
+        width: 90%;
+    }
+
+    .hero-content {
+        padding: 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 28px;
+    }
+
+    .card {
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+}
