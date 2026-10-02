@@ -375,3 +375,30 @@ footer {
 .card-button:hover {
     background: #1d4ed8;
 }
+/* Interactive Checklist */
+
+.interactive-checklist {
+    max-width: 600px;
+    margin: 20px auto;
+    text-align: left;
+}
+
+.interactive-checklist label {
+    display: block;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    cursor: pointer;
+    background: #f8fafc;
+}
+
+.interactive-checklist input {
+    margin-right: 10px;
+    transform: scale(1.2);
+}
+
+#checklist-progress {
+    font-weight: bold;
+    margin-top: 15px;
+}
