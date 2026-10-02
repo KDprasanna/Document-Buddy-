@@ -402,3 +402,22 @@ footer {
     font-weight: bold;
     margin-top: 15px;
 }
+/* Service Search */
+
+.search-box {
+    text-align: center;
+    margin: 25px auto;
+}
+
+.search-box input {
+    width: 80%;
+    max-width: 500px;
+    padding: 14px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.search-box input:focus {
+    outline: none;
+}
