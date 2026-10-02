@@ -27,29 +27,34 @@ function openService(service) {
 }
 // Interactive document checklist
 
-const documentChecks = document.querySelectorAll(".document-check");
-const checklistProgress = document.getElementById("checklist-progress");
+document.addEventListener("DOMContentLoaded", function () {
 
-function updateChecklistProgress() {
+    const documentChecks =
+        document.querySelectorAll(".document-check");
 
-    if (!checklistProgress) {
-        return;
+    const checklistProgress =
+        document.getElementById("checklist-progress");
+
+    function updateChecklistProgress() {
+
+        const total = documentChecks.length;
+
+        const completed =
+            document.querySelectorAll(".document-check:checked").length;
+
+        checklistProgress.textContent =
+            "Progress: " + completed + " / " + total +
+            " documents completed";
     }
 
-    const total = documentChecks.length;
+    documentChecks.forEach(function (checkbox) {
 
-    const completed = document.querySelectorAll(
-        ".document-check:checked"
-    ).length;
+        checkbox.addEventListener("change", function () {
+            updateChecklistProgress();
+        });
 
-    checklistProgress.textContent =
-        Progress: ${completed} / ${total} documents completed;
-}
+    });
 
-documentChecks.forEach(function (checkbox) {
-
-    checkbox.addEventListener("change", updateChecklistProgress);
+    updateChecklistProgress();
 
 });
-
-updateChecklistProgress();
