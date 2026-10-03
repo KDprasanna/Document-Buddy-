@@ -1,1 +1,12 @@
-{"name":"document-buddy-backend","version":"1.0.0","description":"Backend for Document Buddy","main":"backend.js","scripts":{"start":"node backend.js"},"dependencies":{"do":"^0.7.1","dotenv":"^18.0.5","express":"^4.22.3","mongoose":"^9.10.4","tenv":"^0.2.3"}}
+{
+"name": "document-buddy-backend",
+  "version": "1.0.0",
+  "description": "Backend for Document Buddy",
+  "main": "backend.js",
+  "scripts": {
+    "start": "node backend.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
