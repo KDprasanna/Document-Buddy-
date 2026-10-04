@@ -84,3 +84,16 @@ if (serviceSearch) {
     });
 
 }
+async function loadDocuments() {
+    try {
+        const response = await
+        fetch("http://localhost:3001/api/documents");
+        const data = await response.json();
+        console.log("Backend response:",data);
+    } catch (error) {
+        console.error("Backend connection failed:",error);
+    }
+    }
+    loadDocuments();
+
+
