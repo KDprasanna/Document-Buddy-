@@ -1,0 +1,12 @@
+{
+"name": "document-buddy-backend",
+  "version": "1.0.0",
+  "description": "Backend for Document Buddy",
+  "main": "backend.js",
+  "scripts": {
+    "start": "node backend.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
