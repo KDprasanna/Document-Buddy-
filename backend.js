@@ -4,16 +4,27 @@ const mongoose=require("mongoose");
 const Document = require("./models/Document");
 mongoose.connect(process.env.MONGODB_URI)
   .then(() => console.log("MongoDB connected"))
-  .catch((err) => console.log("MongoDB connection error:", err));2
+.catch((err) => console.log(
+  "MongoDB connection error:", err
+));
 const app = express();
 const PORT = 3001;
 
 app.use(express.json());
+app.get("/api/documents", async (req, res) => {
+    try {
+        const documents = await Document.find();
 
-app.get("/", (req, res) => {
-    res.json({
-        message: "DocumentBuddy Backend is running!"
-    });
+        res.json({
+            message: "Documents API is working",
+            documents: documents
+        });
+    } catch (error) {
+        res.status(500).json({
+            message: "Error fetching documents",
+            error: error.message
+        });
+    }
 });
 
 app.get("/api/documents", async (req, res) => {
@@ -110,6 +121,24 @@ app.delete("/api/documents/:id", async (req, res) => {
     });
   }
 });
+app.get("/api/documents/:id", async (req, res) => {
+    try {
+        const document = await Document.findById(req.params.id);
+
+        if (!document) {
+            return res.status(404).json({
+                message: "Document not found"
+            });
+        }
+
+        res.json(document);
+    } catch (error) {
+        res.status(500).json({
+            message: "Error fetching document",
+            error: error.message
+        });
+    }
+});
 app.listen(PORT, () => {
-    console.log("Server running on port", PORT);
+  console.log(`Server running on port ${PORT}`);
 });
