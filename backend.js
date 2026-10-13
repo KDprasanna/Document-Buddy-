@@ -11,36 +11,21 @@ const app = express();
 const PORT = 3001;
 
 app.use(express.json());
+app.use(express.static(__dirname));
 app.get("/api/documents", async (req, res) => {
-    try {
-        const documents = await Document.find();
+  try {
+    const documents = await Document.find();
 
-        res.json({
-            message: "Documents API is working",
-            documents: documents
-        });
-    } catch (error) {
-        res.status(500).json({
-            message: "Error fetching documents",
-            error: error.message
-        });
-    }
-});
-
-app.get("/api/documents", async (req, res) => {
-    try {
-        const documents = await Document.find();
-
-        res.json({
-            message: "Documents API is working",
-            documents: documents
-        });
-    } catch (error) {
-        res.status(500).json({
-            message: "Error fetching documents",
-            error: error.message
-        });
-    }
+    res.json({
+      message: "Documents API is working",
+      documents: documents
+    });
+  } catch (error) {
+    res.status(500).json({
+      message: "Error fetching documents",
+      error: error.message
+    });
+  }
 });
 app.post("/api/documents", async (req, res) => {
   try {
@@ -87,7 +72,7 @@ app.put("/api/documents/:id", async (req, res) => {
             return res.status(404).json({
                 message: "Document not found"
             });
-        }
+        } 
 
         res.json({
             message: "Document updated successfully",
@@ -129,7 +114,7 @@ app.get("/api/documents/:id", async (req, res) => {
             return res.status(404).json({
                 message: "Document not found"
             });
-        }
+        }n  
 
         res.json(document);
     } catch (error) {
