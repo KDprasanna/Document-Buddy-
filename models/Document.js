@@ -14,7 +14,15 @@ const documentSchema = new mongoose.Schema({
     },
     checklist: {
         type: [String]
-    }
+    },
+    status: {
+    type: String,
+    default: "Not Started"
+},
+reminder: {
+    type: String,
+    default: ""
+}
 });
 
 module.exports = mongoose.model("Document", documentSchema);
