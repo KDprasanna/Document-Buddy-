@@ -139,7 +139,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (savedDate) {
         reminderInput.value = savedDate;
         reminderMessage.textContent = "Saved reminder date: " + savedDate;
-    }s
+    }
 
     saveButton.addEventListener("click", function () {
         const date = reminderInput.value;
