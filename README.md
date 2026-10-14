@@ -88,3 +88,16 @@ Manual testing was performed using the web browser.
 
 ### Testing Outcome
 All six service pages passed the initial manual tests performed.
+## How to Run the Project
+
+1. Install Node.js.
+2. Open the project folder in VS Code.
+3. Open the terminal.
+4. Run `npm install`.
+5. Ensure MongoDB is configured correctly.
+6. Start the backend using `node backend.js`.
+7. Open the frontend using the project's configured method.
+
+## Known Issues
+
+- No known issues were observed during the manual tests performed.
