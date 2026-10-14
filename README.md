@@ -62,3 +62,29 @@ The application should be tested for:
 - Improve user experience and accessibility
 - Add more document information
 - Improve validation and error handling
+## Testing Report
+
+The following service pages were tested manually:
+
+| Service Page | Result |
+|---|---|
+| Aadhaar | Passed |
+| Address | Passed |
+| Bank | Passed |
+| College | Passed |
+| Passport | Passed |
+| Scholarship | Passed |
+
+### Features Tested
+- Homepage loading and navigation
+- Service page navigation
+- Checklist progress tracking
+- Document completion status
+- Print / Save Checklist functionality
+- Aadhaar reminder saving and persistence after refresh
+
+### Testing Method
+Manual testing was performed using the web browser.
+
+### Testing Outcome
+All six service pages passed the initial manual tests performed.
